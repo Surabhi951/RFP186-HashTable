@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 public class MyMapNode<K,V> {
         K key;
         V value;

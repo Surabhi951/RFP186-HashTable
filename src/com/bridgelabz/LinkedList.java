@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 public class LinkedList<K,V> {
     MyMapNode<K,V> head;
     MyMapNode<K,V> tail;

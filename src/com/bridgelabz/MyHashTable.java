@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 public class MyHashTable<K,V> {
     LinkedList<K,V> linkedList;
 
