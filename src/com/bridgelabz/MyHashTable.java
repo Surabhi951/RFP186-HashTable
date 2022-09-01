@@ -1,9 +1,11 @@
 package com.bridgelabz;
 
-public class HashTable <K,V> {
+import java.util.ArrayList;
+
+public class MyHashTable<K,V> {
     LinkedList<K,V> linkedList;
 
-    public HashTable() {
+    public MyHashTable() {
         this.linkedList = new LinkedList<>();
     }
 
@@ -26,5 +28,4 @@ public class HashTable <K,V> {
     public void replace(K key, V value){
         linkedList.replace(key,value);
     }
-
 }

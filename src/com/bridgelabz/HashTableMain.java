@@ -4,7 +4,7 @@ public class HashTableMain {
     public static void main(String[] args) {
         String paragraph = "To be or not to be";
         String[] splitArray = paragraph.split(" ");
-        HashTable<String,Integer> hashTable = new HashTable<>();
+        MyHashTable<String,Integer> hashTable = new MyHashTable<>();
         for (String word:splitArray) {
             if(hashTable.containsKey(word)){
                 int count =  hashTable.get(word);
