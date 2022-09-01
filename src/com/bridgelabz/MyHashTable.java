@@ -1,7 +1,5 @@
 package com.bridgelabz;
 
-import java.util.ArrayList;
-
 public class MyHashTable<K,V> {
     LinkedList<K,V> linkedList;
 

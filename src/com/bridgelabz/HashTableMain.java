@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 public class HashTableMain {
     public static void main(String[] args) {
         String paragraph = "To be or not to be";
