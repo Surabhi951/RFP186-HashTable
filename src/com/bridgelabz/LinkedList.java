@@ -2,12 +2,12 @@ package com.bridgelabz;
 
 public class LinkedList <K,V> {
 
-    MyNode<K, V> head;
-    MyNode<K, V> tail;
+    MyMapNode<K, V> head;
+    MyMapNode<K, V> tail;
 
 
-    public MyNode<K,V> search(K searchData) {
-        MyNode<K,V> temp = head;
+    public MyMapNode<K,V> search(K searchData) {
+        MyMapNode<K,V> temp = head;
         while(temp != null){
             if(temp.key.equals(searchData))
                 return temp;
@@ -17,7 +17,7 @@ public class LinkedList <K,V> {
     }
 
 
-    public void append(MyNode<K,V> node ) {
+    public void append(MyMapNode<K,V> node ) {
 
         if(head == null) {
             head = node;
@@ -30,7 +30,7 @@ public class LinkedList <K,V> {
     }
 
     public void print(){
-        MyNode<K,V> temp = head;
+        MyMapNode<K,V> temp = head;
         while(temp != null){
             System.out.println(temp);
             temp = temp.next;
