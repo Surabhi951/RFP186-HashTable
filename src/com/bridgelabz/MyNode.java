@@ -10,4 +10,13 @@ public class MyNode <K,V> {
             this.key = key;
             this.value = value;
         }
+
+    @Override
+    public String toString() {
+        return "MyNode{" +
+                "key=" + key +
+                ", value=" + value +
+                ", next=" + next +
+                '}';
+    }
 }

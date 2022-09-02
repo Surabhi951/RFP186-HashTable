@@ -1,60 +1,48 @@
 package com.bridgelabz;
 
 public class LinkedList <K,V> {
-    MyNode<K,V> head;
-    MyNode<K,V> tail;
 
-    public void add(K key,V value) {
-        MyNode<K,V> newNode = new MyNode<K,V>(key,value);
+    MyNode<K, V> head;
+    MyNode<K, V> tail;
+
+
+    public MyNode<K,V> search(K searchData) {
+        MyNode<K,V> temp = head;
+        while(temp != null){
+            if(temp.key.equals(searchData))
+                return temp;
+            temp = temp.next;
+        }
+        return null;
+    }
+
+
+    public void append(MyNode<K,V> node ) {
+
         if(head == null) {
-            head = newNode;
+            head = node;
+            tail = node;
         }
         else{
-            tail.next = newNode;
-        }
-        tail = newNode;
-    }
-
-    public void replace(K key, V value) {
-        MyNode<K, V> temp = head;
-        while (temp != null) {
-            if (temp.key.equals(key)) {
-                temp.value = value;
-            }
-            temp = temp.next;
+            tail.next = node;
+            tail = node;
         }
     }
 
-    public boolean containsKey(String key){
+    public void print(){
         MyNode<K,V> temp = head;
         while(temp != null){
-            if(temp.key.equals(key)){
-                return true;
-            }
+            System.out.println(temp);
             temp = temp.next;
         }
-        return false;
-
     }
 
-    public int get(String word){
-        MyNode<K,V> temp = head;
-        int count = 0;
-        while(temp != null){
-            if(temp.key.equals(word)){
-                count++;
-            }
-            temp = temp.next;
-        }
-        return count;
-    }
-
-
-    public void print() {
-        MyNode<K,V> temp = head;
-        while(temp != null){
-            System.out.print("{ " + temp.key + "=" + temp.value + " }" + "\n");
-            temp = temp.next;
-        }
+    @Override
+    public String toString() {
+        return "LinkedList{" +
+                "head=" + head +
+                ", tail=" + tail +
+                '}';
     }
 }
+
