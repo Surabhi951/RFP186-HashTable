@@ -5,8 +5,7 @@ public class LinkedList <K,V> {
     MyMapNode<K, V> head;
     MyMapNode<K, V> tail;
 
-
-    public MyMapNode<K,V> search(K searchData) {
+ public MyMapNode<K,V> search(K searchData) {
         MyMapNode<K,V> temp = head;
         while(temp != null){
             if(temp.key.equals(searchData))
@@ -16,9 +15,7 @@ public class LinkedList <K,V> {
         return null;
     }
 
-
-    public void append(MyMapNode<K,V> node ) {
-
+  public void append(MyMapNode<K,V> node ) {
         if(head == null) {
             head = node;
             tail = node;
@@ -26,11 +23,11 @@ public class LinkedList <K,V> {
         else{
             tail.next = node;
             tail = node;
-        }
-    }
+           }
+       }
 
-    public void print(){
-        MyMapNode<K,V> temp = head;
+   public void print() {
+       MyMapNode<K,V> temp = head;
         while(temp != null){
             System.out.println(temp);
             temp = temp.next;

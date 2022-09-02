@@ -8,7 +8,7 @@ public class MyMapNode<K,V> {
     public MyMapNode(K key, V value) {
             this.key = key;
             this.value = value;
-        }
+      }
 
     @Override
     public String toString() {
@@ -16,5 +16,6 @@ public class MyMapNode<K,V> {
                 "key=" + key +
                 ", value=" + value +
                 '}';
+               
     }
 }
