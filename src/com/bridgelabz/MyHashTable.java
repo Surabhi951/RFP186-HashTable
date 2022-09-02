@@ -59,4 +59,10 @@ public class MyHashTable<K,V> {
             i++;
         }
     }
+
+    public void remove(K key){
+        int index = getIndex(key);
+        LinkedList<K,V> list =  bucketList.get(index);
+        list.delete(key);
+    }
 }

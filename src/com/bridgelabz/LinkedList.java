@@ -16,7 +16,6 @@ public class LinkedList <K,V> {
         return null;
     }
 
-
     public void append(MyMapNode<K,V> node ) {
 
         if(head == null) {
@@ -35,6 +34,15 @@ public class LinkedList <K,V> {
             System.out.println(temp);
             temp = temp.next;
         }
+    }
+
+    public void delete(K key){
+        MyMapNode<K,V> temp = head;
+        MyMapNode<K,V> searchedElement = search(key);
+        while(temp.next != searchedElement){
+            temp = temp.next;
+        }
+        temp.next = searchedElement.next;
     }
 
     @Override
