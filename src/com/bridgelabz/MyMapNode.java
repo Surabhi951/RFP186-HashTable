@@ -1,4 +1,5 @@
 package com.bridgelabz;
+
 public class MyMapNode<K,V> {
         K key;
         V value;
@@ -7,5 +8,14 @@ public class MyMapNode<K,V> {
     public MyMapNode(K key, V value) {
             this.key = key;
             this.value = value;
+      }
+
+    @Override
+    public String toString() {
+        return "MyMapNode{" +
+                "key=" + key +
+                ", value=" + value +
+                '}';
+               
     }
 }
