@@ -15,6 +15,10 @@ public class HashTableMain {
         }
         hashTable.print();
         System.out.println();
+        System.out.println("***********************************");
+
+        hashTable.remove("avoidable");
+        hashTable.print();
     }
 }
 
