@@ -2,7 +2,6 @@ package com.bridgelabz;
 public class LinkedList<K,V> {
     MyMapNode<K,V> head;
     MyMapNode<K,V> tail;
-
     public void add(K key,V value) {
         MyMapNode<K,V> newNode = new MyMapNode<K,V>(key,value);
         if(head == null) {
